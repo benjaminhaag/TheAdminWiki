@@ -14,7 +14,7 @@ Unlike your hard drive or SSD, RAM has three important traits:
  - **Volatile** - RAM can only hold data while the computer is powered on. When you restart or shut down, everything in RAM is wiped.
  - **Random access** - Any piece of data in RAM can be reached directly, without going through other data first. This makes it ideal for multitasking and running complex programs smoothly.
 
-> [!Note]
+> [!NOTE]
 > Random access means RAM doesn’t slow down when information is scattered. Still, CPUs often use techniques like prefetching (guessing what data will be needed next) to make programs run even faster when data is close together (good locality).
 
 ## Static and Dynamic RAM
