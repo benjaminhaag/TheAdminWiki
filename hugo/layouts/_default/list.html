@@ -16,13 +16,12 @@
         {{- range .Pages.ByWeight }}
         <a href="{{ .RelPermalink }}">
             <div class="postcard">
-                <img src="{{ .Params.image | default "https://images.unsplash.com/photo-1644088379091-d574269d422f?q=80&w=1093&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }}" alt="{{ .Title }}">
+                <img src="{{ .Params.image | default "/images/default.png" }}" alt="{{ .Title }}">
                 <div>
                     <h2>{{ .Title }}</h2>
                     <p class="post-card-excerpt">
                         {{ .Params.description | default .Summary | plainify }}
                     </p>
-                    <!-- TODO: date only makes sense for posts. not for categories. -->
                      {{ if .IsPage }}
                     <p>
                         <time datetime="{{ .Date.Format "2025-12-14T14:25:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
@@ -33,7 +32,7 @@
                 </div>
             </div>
         </a>
-        {{- end}}
+        {{- end -}}
     </article>
 </div>
 {{- end }}
